@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+/* button click animatio */
+@keyframes buttonClickAnimation {
+  0% {
+    opacity: 0;
+
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#animBtn {
+  animation-name: buttonClickAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+/* underline animation */
+/* @keyframes underlineAnimation{
+  from{
+    width: 0px;
+    height: 1px;
+  }to{
+    width: 17px;
+    height: 1px;
+  }
+}
+
+#navUl{
+  animation-name: underlineAnimation;
+  animation-duration: 1s;
+} */
+
+html{
+  scroll-behavior: smooth;
+}
+
+
