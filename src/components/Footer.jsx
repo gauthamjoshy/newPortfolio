@@ -1,78 +1,77 @@
-import React from 'react'
-import { FaLinkedin, FaPhoneSquare } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
+import React from "react";
+import { FaLinkedin, FaPhoneSquare } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 function Footer() {
-    return (
-        <>
-            <div id='contact' className='md:my-30 md:mt-50 my-20'>
+  return (
+    <footer
+      id="contact"
+      className="py-16 md:py-24"
+    >
+      <div className="mx-auto max-w-6xl px-4">
 
-                <div className='text-center'>
-                    <h2 className='text-lg font-medium'>Get In Touch</h2>
-                    <h1 className='text-5xl font-bold'>Contact Me</h1>
-                </div>
+        {/* heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-lg font-medium text-gray-600">
+            Get In Touch
+          </h2>
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Contact Me
+          </h1>
+        </div>
 
-                <div className='grid md:mx-50 mx-10 md:gap-0 gap-10 md:mt-20 mt-10'>
+        {/* contact links */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
 
-                    <div className='md:flex grid gap-5 md:gap-10 md:justify-center'>
-                        {/* linkedin */}
-                        <a href='https://www.linkedin.com/in/gautham-joshy' className='bg-gray-200 flex items-center md:p-5 p-3 md:text-2xl text-xl gap-2 rounded-4xl border shadow w-fit hover:bg-black hover:text-white transition'>
-                            <FaLinkedin className='' />
-                            Linkedin
-                        </a>
+          <a
+            href="https://www.linkedin.com/in/gautham-joshy"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 px-6 py-3 text-lg bg-gray-200 border rounded-3xl shadow transition hover:bg-black hover:text-white"
+          >
+            <FaLinkedin className="text-2xl" />
+            LinkedIn
+          </a>
 
-                        {/* email */}
-                        <span className='bg-gray-200 flex items-center md:p-5 p-3 md:text-2xl text-xl gap-2 rounded-4xl border shadow w-fit hover:scale-105 transition'>
-                            <MdEmail className='' />
-                            gauthamjoshy32@gmail.com
-                        </span>
+          <div className="flex items-center gap-2 px-6 py-3 text-lg bg-gray-200 border rounded-3xl shadow transition hover:scale-105">
+            <MdEmail className="text-2xl" />
+            gauthamjoshy32@gmail.com
+          </div>
 
-                        {/* Phone */}
-                        <span className='bg-gray-200 flex items-center md:p-5 p-3 md:text-2xl text-xl gap-2 rounded-4xl border shadow w-fit hover:scale-105 transition'>
-                            <FaPhoneSquare className='' />
-                            +91 70254 41105
-                        </span>
+          <div className="flex items-center gap-2 px-6 py-3 text-lg bg-gray-200 border rounded-3xl shadow transition hover:scale-105">
+            <FaPhoneSquare className="text-2xl" />
+            +91&nbsp;70254&nbsp;41105
+          </div>
 
-                    </div>
+        </div>
 
-                    {/* 2nd div */}
-                    <div className='flex justify-center items-center md:gap-10 gap-3 md:mt-50'>
+        {/* footer navigation */}
+        <nav className="flex flex-wrap justify-center gap-6 md:gap-10 mb-12">
 
-                        <div className='group'>
-                            <a href="#top" className='md:text-2xl font-medium' >Home</a>
-                            <div className='relative left-[50%] w-0 h-0.5 bg-black transition-all duration-400 group-hover:w-full group-hover:h-0.5 group-hover:left-0 rounded-4xl'></div>
-                        </div>
-                        <div className='group'>
-                            <a href="#about" className='md:text-2xl font-medium' >About</a>
-                            <div className='relative left-[50%] w-0 h-0.5 bg-black transition-all duration-400 group-hover:w-full group-hover:h-0.5 group-hover:left-0 rounded-4xl'></div>
-                        </div>
-                        <div className='group'>
-                            <a href="#skills" className='md:text-2xl font-medium' >Skills</a>
-                            <div className='relative left-[50%] w-0 h-0.5 bg-black transition-all duration-400 group-hover:w-full group-hover:h-0.5 group-hover:left-0 rounded-4xl'></div>
-                        </div>
-                        <div className='group'>
-                            <a href="#projects" className='md:text-2xl font-medium' >Projects</a>
-                            <div className='relative left-[50%] w-0 h-0.5 bg-black transition-all duration-400 group-hover:w-full group-hover:h-0.5 group-hover:left-0 rounded-4xl'></div>
-                        </div>
-                        <div className='group'>
-                            <a href="#contact" className='md:text-2xl font-medium' >Contact</a>
-                            <div className='relative left-[50%] w-0 h-0.5 bg-black transition-all duration-400 group-hover:w-full group-hover:h-0.5 group-hover:left-0 rounded-4xl'></div>
-                        </div>
-
-                    </div>
-
-                    {/* 3rd div */}
-                    <div className='text-center md:mt-20'>
-                        <span className='md:text-sm text-xs font-light'>Copyright © 2025 Gautham Joshy. All rights reserved</span>
-                    </div>
-
-
-                </div>
-
+          {["top", "about", "skills", "projects", "contact"].map((item) => (
+            <div key={item} className="group">
+              <a
+                href={`#${item}`}
+                className="text-lg md:text-xl font-medium"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </a>
+              <div className="h-0.5 w-0 bg-black mx-auto transition-all duration-300 group-hover:w-full rounded-full"></div>
             </div>
+          ))}
 
-        </>
-    )
+        </nav>
+
+        {/* copyright */}
+        <div className="text-center">
+          <p className="text-xs md:text-sm text-gray-500">
+            © 2025 Gautham Joshy. All rights reserved.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

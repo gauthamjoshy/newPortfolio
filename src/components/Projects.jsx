@@ -1,81 +1,114 @@
-import React from 'react'
-import clone_design from '../assets/clone_design.png'
-import Screenshot from '../assets/Screenshot.png'
+import React from "react";
+import cloneDesign from "../assets/clone_design.png";
+import screenshot from "../assets/Screenshot.png";
 
 function Projects() {
-    return (
-        <>
-            <div id='projects' className='md:my-30 md:mt-50 my-20'>
+  return (
+    <section
+      id="projects"
+      className="py-16 md:py-24"
+    >
+      <div className="mx-auto max-w-6xl px-4">
 
-                <div className='text-center'>
-                    <h2 className='text-lg font-medium'>Browse My Recent</h2>
-                    <h1 className='text-5xl font-bold'>Projects</h1>
-                </div>
+        {/* heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-lg font-medium text-gray-600">
+            Browse My Recent
+          </h2>
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Projects
+          </h1>
+        </div>
 
+        {/* projects grid */}
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
-                <div className='grid md:grid-cols-3 md:mx-40 mx-10 md:gap-10 gap-10 md:mt-30 mt-10'>
+          {/* project card 1 */}
+          <div className="border rounded-3xl p-6 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-black">
+            <img
+              src={cloneDesign}
+              alt="Clone Web Design"
+              className="w-full h-48 object-cover rounded-2xl mb-5 transition-transform duration-300 hover:scale-105"
+            />
 
-                    {/* card-1 */}
+            <h3 className="text-2xl font-semibold text-center">
+              Clone Web Design
+            </h3>
 
-                    <div className='border rounded-4xl p-5 shadow-2xl hover:shadow-black transition duration-200 hover:scale-101'>
+            <p className="text-base md:text-lg font-medium text-center mt-2">
+              A desktop-focused IMDb clone built using HTML, CSS, and Bootstrap.
+            </p>
 
-                        <div className=''>
-                            <img src={clone_design} alt="" className='border rounded-4xl md:h-75 h-50 hover:scale-105 transition' />
-                        </div>
+            <div className="flex justify-center gap-4 mt-6">
+              <a
+                href="https://github.com/gauthamjoshy/clone_site"
+                target="_blank"
+                rel="noreferrer"
+                className="border px-5 py-2 rounded-full font-medium transition hover:bg-black hover:text-white"
+              >
+                GitHub
+              </a>
 
-
-
-                        <div className='text-center my-5'>
-                            <h3 className='text-2xl font-semibold'>Clone Web design</h3>
-                            <p className='text-lg font-medium mt-2'>A web design clone of IMDb specifically for desktop, created using HTML, CSS, and Bootstrap</p>
-                        </div>
-                        <div className='flex justify-center items-center gap-5 pb-5'>
-                            <a href='https://github.com/gauthamjoshy/clone_site' className='bg-white border text-black text-lg px-4 py-2 rounded-4xl hover:bg-black hover:text-white transition cursor-pointer shadow-2xl'>Github</a>
-                            <a href='https://clone-site-tau.vercel.app/' className='bg-black border text-white text-lg px-4 py-2 rounded-4xl hover:bg-white hover:text-black transition cursor-pointer shadow-2xl'>Live Demo</a>
-                        </div>
-                    </div>
-
-                    {/* card-2 */}
-                    <div className='border rounded-4xl p-5 shadow-2xl hover:shadow-black transition duration-200 hover:scale-101 '>
-
-                        <div className=''>
-                            <img src={Screenshot} alt="" className='border rounded-4xl w-125 md:h-75 h-50 hover:scale-105 transition ' />
-                        </div>
-
-                        <div className='text-center my-5'>
-                            <h3 className='text-2xl font-semibold'>Student Progress Manager(Frontend)</h3>
-                            <p className='text-lg font-medium mt-2'>A React Frontend project for tracking the progress of students. Enables faculty authentication and complete student record management with CRUD features, also includes search, filtering, and sorting, powered by JSON Server as a mock backend.</p>
-                        </div>
-                        <div className='flex justify-center items-center gap-5 pb-5'>
-                            <a href='https://github.com/gauthamjoshy/studentManagementFrontend' className='bg-white border text-black text-lg px-4 py-2 rounded-4xl hover:bg-black hover:text-white transition cursor-pointer shadow-2xl'>Github</a>
-                            <a href='https://student-management-frontend-lake.vercel.app/' className='bg-black border text-white text-lg px-4 py-2 rounded-4xl hover:bg-white hover:text-black transition cursor-pointer shadow-2xl'>Live Demo</a>
-                        </div>
-                    </div>
-
-                    {/* card-3 */}
-                    {/* <div className='border rounded-4xl p-5 shadow-2xl hover:shadow-black transition duration-200 hover:scale-101'>
-
-                        <div className=''>
-                            <img src="" alt="" className='border rounded-4xl md:h-75 h-50 hover:scale-105 transition ' />
-                        </div>
-
-
-                        <div className='text-center my-5'>
-                            <h3 className='text-2xl font-semibold'></h3>
-                            <p className='text-lg font-medium mt-2'>Currently under development</p>
-                        </div>
-                        <div className='flex justify-center items-center gap-5 pb-5'>
-                            <p className='bg-white border text-black text-lg px-4 py-2 rounded-4xl hover:bg-black hover:text-white transition cursor-pointer shadow-2xl'>Github</p>
-                            <a href='https://clone-site-tau.vercel.app/' className='bg-black border text-white text-lg px-4 py-2 rounded-4xl hover:bg-white hover:text-black transition cursor-pointer shadow-2xl'>Live Demo</a>
-                        </div>
-
-                    </div> */}
-
-                </div>
-
+              <a
+                href="https://clone-site-tau.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-black text-white px-5 py-2 rounded-full font-medium transition hover:bg-white hover:text-black border"
+              >
+                Live Demo
+              </a>
             </div>
-        </>
-    )
+          </div>
+
+          {/* project card 2 */}
+          <div className="border rounded-3xl p-6 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-black">
+            <img
+              src={screenshot}
+              alt="Student Progress Manager"
+              className="w-full h-48 object-cover rounded-2xl mb-5 transition-transform duration-300 hover:scale-105"
+            />
+
+            <h3 className="text-2xl font-semibold text-center">
+              Student Progress Manager
+            </h3>
+
+            <p className="text-base md:text-lg font-medium text-center mt-2">
+              A React frontend application for managing student records with
+              CRUD operations, search, filtering, and sorting using JSON Server.
+            </p>
+
+            <div className="flex justify-center gap-4 mt-6">
+              <a
+                href="https://github.com/gauthamjoshy/studentManagementFrontend"
+                target="_blank"
+                rel="noreferrer"
+                className="border px-5 py-2 rounded-full font-medium transition hover:bg-black hover:text-white"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="https://student-management-frontend-lake.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-black text-white px-5 py-2 rounded-full font-medium transition hover:bg-white hover:text-black border"
+              >
+                Live Demo
+              </a>
+            </div>
+          </div>
+
+          {/* placeholder / future project */}
+          <div className="border rounded-3xl p-6 shadow-lg flex items-center justify-center text-center text-gray-500">
+            <p className="text-lg font-medium">
+              More projects coming soon 🚀
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Projects
+export default Projects;
